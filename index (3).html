@@ -1,0 +1,215 @@
+<html lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Passagem de Turno
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet"/>
+ </head>
+ <body class="bg-gray-100 font-roboto">
+  <div class="container mx-auto p-4">
+   <header class="flex justify-between items-center py-4">
+    <h1 class="text-2xl font-bold">
+     Passagem de Turno
+    </h1>
+    <nav>
+     <ul class="flex space-x-4">
+      <li>
+       <a class="text-blue-500 hover:underline" href="#">
+        Início
+       </a>
+      </li>
+      <li>
+       <a class="text-blue-500 hover:underline" href="#">
+        Pendências
+       </a>
+      </li>
+      <li>
+       <a class="text-blue-500 hover:underline" href="#">
+        Relatórios
+       </a>
+      </li>
+      <li>
+       <a class="text-blue-500 hover:underline" href="#">
+        Configurações
+       </a>
+      </li>
+      <li>
+       <a class="text-blue-500 hover:underline" href="#">
+        Login
+       </a>
+      </li>
+     </ul>
+    </nav>
+   </header>
+   <main>
+    <section class="mb-8" id="login">
+     <h2 class="text-xl font-semibold mb-4">
+      Login
+     </h2>
+     <div class="bg-white p-4 rounded shadow">
+      <div class="mb-4">
+       <label class="block text-gray-700" for="username">
+        Usuário:
+       </label>
+       <input class="w-full p-2 border rounded" id="username" type="text"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="password">
+        Senha:
+       </label>
+       <input class="w-full p-2 border rounded" id="password" type="password"/>
+      </div>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded">
+       Entrar
+      </button>
+     </div>
+    </section>
+    <section class="mb-8">
+     <h2 class="text-xl font-semibold mb-4">
+      Informações do Turno
+     </h2>
+     <div class="bg-white p-4 rounded shadow">
+      <div class="mb-4">
+       <label class="block text-gray-700" for="turno">
+        Turno:
+       </label>
+       <select class="w-full p-2 border rounded" id="turno">
+        <option>
+         Dia
+        </option>
+        <option>
+         Noite
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="data">
+        Data:
+       </label>
+       <input class="w-full p-2 border rounded" id="data" type="date"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="responsavel">
+        Responsável:
+       </label>
+       <input class="w-full p-2 border rounded" id="responsavel" type="text"/>
+      </div>
+     </div>
+    </section>
+    <section class="mb-8">
+     <h2 class="text-xl font-semibold mb-4">
+      Pendências
+     </h2>
+     <div class="bg-white p-4 rounded shadow">
+      <div class="mb-4">
+       <label class="block text-gray-700" for="pendencia">
+        Descrição da Pendência:
+       </label>
+       <textarea class="w-full p-2 border rounded" id="pendencia" rows="4"></textarea>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="status">
+        Status:
+       </label>
+       <select class="w-full p-2 border rounded" id="status">
+        <option value="nao-iniciado">
+         Não Iniciado
+        </option>
+        <option value="em-andamento">
+         Em Andamento
+        </option>
+        <option value="realizado">
+         Realizado
+        </option>
+       </select>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="agendamento">
+        Agendar:
+       </label>
+       <input class="w-full p-2 border rounded" id="agendamento" type="datetime-local"/>
+      </div>
+      <div class="mb-4">
+       <label class="block text-gray-700" for="foto">
+        Foto:
+       </label>
+       <input class="w-full p-2 border rounded" id="foto" type="file"/>
+      </div>
+      <button class="bg-blue-500 text-white px-4 py-2 rounded">
+       Adicionar Pendência
+      </button>
+     </div>
+    </section>
+    <section id="visualizacao-pendencias">
+     <h2 class="text-xl font-semibold mb-4">
+      Pendências Atuais
+     </h2>
+     <div class="bg-white p-4 rounded shadow">
+      <ul>
+       <li class="flex justify-between items-center mb-2 bg-red-100 p-2 rounded">
+        <div>
+         <span>
+          Pendência 1 - Não Iniciado
+         </span>
+         <img alt="Imagem de exemplo para a pendência 1" class="mt-2" height="100" src="https://storage.googleapis.com/a1aa/image/HRLm4BohMoJjA57OTv7C3oVUs0PXWBqeBMwj2Uc0VlWfxk6TA.jpg" width="100"/>
+        </div>
+        <button class="text-red-500">
+         <i class="fas fa-trash">
+         </i>
+        </button>
+       </li>
+       <li class="flex justify-between items-center mb-2 bg-yellow-100 p-2 rounded">
+        <div>
+         <span>
+          Pendência 2 - Em Andamento
+         </span>
+         <img alt="Imagem de exemplo para a pendência 2" class="mt-2" height="100" src="https://storage.googleapis.com/a1aa/image/Zerb1ecXavrIAUtxR3jfJFHKgV0Q9iRUBzx3LPeWF1SyHTqPB.jpg" width="100"/>
+        </div>
+        <button class="text-red-500">
+         <i class="fas fa-trash">
+         </i>
+        </button>
+       </li>
+       <li class="flex justify-between items-center mb-2 bg-green-100 p-2 rounded">
+        <div>
+         <span>
+          Pendência 3 - Realizado
+         </span>
+         <img alt="Imagem de exemplo para a pendência 3" class="mt-2" height="100" src="https://storage.googleapis.com/a1aa/image/xVM0bg77Df0RMaJIZOHOfOusBjI4Bt0CR5hPDykb1wDfjJ1nA.jpg" width="100"/>
+        </div>
+        <button class="text-red-500">
+         <i class="fas fa-trash">
+         </i>
+        </button>
+       </li>
+      </ul>
+     </div>
+    </section>
+   </main>
+  </div>
+  <script>
+   // Função para enviar notificação
+        function enviarNotificacao(titulo, mensagem) {
+            if (Notification.permission === "granted") {
+                new Notification(titulo, { body: mensagem });
+            } else if (Notification.permission !== "denied") {
+                Notification.requestPermission().then(permission => {
+                    if (permission === "granted") {
+                        new Notification(titulo, { body: mensagem });
+                    }
+                });
+            }
+        }
+
+        // Exemplo de uso da função de notificação
+        document.querySelector('button').addEventListener('click', () => {
+            enviarNotificacao('Nova Pendência', 'Uma nova pendência foi adicionada.');
+        });
+  </script>
+ </body>
+</html>
